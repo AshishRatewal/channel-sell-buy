@@ -4,56 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: white;
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            height: 100vh;
+            align-items: center;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             box-sizing: border-box;
+        }
+        .menu {
+            width: 100%;
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .menu a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
         }
         .contact-container {
             text-align: center;
             width: 100%;
-            max-width: 400px;
-        }
-        input[type="text"], input[type="number"], input[type="url"], input[type="tel"], button {
-            padding: 10px;
-            width: 100%;
-            margin-bottom: 10px;
-            box-sizing: border-box; /* Ensures padding is included in the width */
-        }
-        button {
-            cursor: pointer;
-        }
-        @media (min-width: 768px) {
-            .contact-container {
-                max-width: 600px;
-            }
-        }
-        @media (min-width: 1024px) {
-            .contact-container {
-                max-width: 800px;
-            }
+            max-width: 600px;
+            margin-top: 80px; /* Adjust for the fixed menu height */
+            padding: 20px;
         }
     </style>
 </head>
 <body>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+        <a href="https://wa.me/9817078158" target="_blank">WhatsApp</a>
+    </div>
     <div class="contact-container">
-        <h1>Contact Us</h1>
+        <h1>Sell Your Channel</h1>
         <form>
-            <input type="url" id="youtubeChannel" placeholder="YouTube Channel Link" required>
-            <input type="number" id="subscriberCount" placeholder="Subscriber Count" required>
-            <input type="number" id="price" placeholder="Price" required>
-            <input type="tel" id="contactNumber" placeholder="Contact Number" required>
-            <input type="text" id="address" placeholder="Your Address" required>
-            <button type="submit">Submit</button>
+            <div class="form-group">
+                <input type="url" class="form-control" id="youtubeChannel" placeholder="YouTube Channel Link" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="subscriberCount" placeholder="Subscriber Count" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="price" placeholder="Price" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control" id="contactNumber" placeholder="Contact Number" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="address" placeholder="Your Address" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
         </form>
     </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
